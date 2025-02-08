@@ -20,7 +20,7 @@ export default function CrearProducto(){
         e.preventDefault();
         console.log(formData);
         setIsLoading(true);
-        fetch('https://servidor-2-97g5.onrender.com/api/product-create', {
+        fetch('https://servidor-2-1.onrender.com/api/producto-create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

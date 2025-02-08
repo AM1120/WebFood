@@ -23,7 +23,7 @@ export default function Registro() {
     console.log(formData);
 
     try {
-      const res = await fetch('https://servidor-2-97g5.onrender.com/api/crear-cliente', {
+      const res = await fetch('https://servidor-2-1.onrender.com/api/crear-cliente', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // Aseguramos que el tipo de contenido sea JSON
@@ -108,9 +108,7 @@ export default function Registro() {
             required
           >
             <option value="">Seleccione un tipo de documento</option>
-            <option value="1">DNI</option>
-            <option value="2">Carnet de extranjería</option>
-            <option value="3">Pasaporte</option>
+            <option value="1">Cédula</option>
           </select>
         </div>
 
