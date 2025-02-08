@@ -14,7 +14,6 @@ export default function Catalogo() {
       .then((data) => setProductos(data))
       .catch((error) => console.error("Error al cargar productos:", error));
   }
-  // Fetch de productos cuando se monta el componente
   useEffect(() => {
     getProductos()
   }, []);
@@ -24,7 +23,7 @@ export default function Catalogo() {
   function actualizarLista(productId: number) {
     setProductos((prev: Producto[] | undefined) => {
       if (prev === undefined) {
-        return []; // Si el estado es undefined, retorna un array vacío o lo que tenga sentido para tu caso
+        return []; 
       }
       return prev.filter((prod) => prod.id !== productId);
     });

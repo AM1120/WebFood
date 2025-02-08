@@ -72,7 +72,6 @@ function ModalEdit({ producto, closeModal, actualizarLista,obtenerProductos }:{p
         descripcion: producto.descripcion,
         img: producto.img,
         precio: producto.precio,
-        stock: producto.stock,
     });
 
     // Manejar el cambio en los campos del formulario
@@ -136,14 +135,6 @@ function ModalEdit({ producto, closeModal, actualizarLista,obtenerProductos }:{p
                         value={formData.precio}
                         onChange={handleInputChange}
                         placeholder="Precio del producto"
-                        className="p-3 border border-orange-300 rounded-lg focus:ring focus:ring-orange-200"
-                    />
-                    <input
-                        type="number"
-                        name="stock"
-                        value={formData.stock}
-                        onChange={handleInputChange}
-                        placeholder="Stock del producto"
                         className="p-3 border border-orange-300 rounded-lg focus:ring focus:ring-orange-200"
                     />
                     <button

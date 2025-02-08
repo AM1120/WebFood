@@ -6,7 +6,6 @@ export default function CrearProducto(){
         descripcion: '',
         img: '',
         precio: '',
-        stock: '',
     });
     const [isLoading,setIsLoading] = useState(false);
 
@@ -39,7 +38,7 @@ export default function CrearProducto(){
 
     // Restablecer el formulario
     const resetForm = () => {
-        setFormData({ nombre: '', descripcion: '', img: '', precio: '', stock: '' });
+        setFormData({ nombre: '', descripcion: '', img: '', precio: '' });
     };
 
     useEffect(()=>{
@@ -81,14 +80,6 @@ export default function CrearProducto(){
                         value={formData.precio}
                         onChange={handleInputChange}
                         placeholder="Precio del producto"
-                        className="p-3 border border-orange-300 rounded-lg focus:ring focus:ring-orange-200"
-                    />
-                    <input
-                        type="number"
-                        name="stock"
-                        value={formData.stock}
-                        onChange={handleInputChange}
-                        placeholder="Stock del producto"
                         className="p-3 border border-orange-300 rounded-lg focus:ring focus:ring-orange-200"
                     />
                     <button
