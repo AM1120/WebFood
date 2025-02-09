@@ -9,11 +9,12 @@ export default function Catalogo() {
   const [productos, setProductos] = useState<Producto[]>();
 
   const getProductos=()=>{
-    fetch("https://servidor-2-1.onrender.com/api/productos")
+    fetch("https://servidor-2-97g5.onrender.com/api/products")
       .then((response) => response.json())
       .then((data) => setProductos(data))
       .catch((error) => console.error("Error al cargar productos:", error));
   }
+  // Fetch de productos cuando se monta el componente
   useEffect(() => {
     getProductos()
   }, []);
@@ -23,7 +24,7 @@ export default function Catalogo() {
   function actualizarLista(productId: number) {
     setProductos((prev: Producto[] | undefined) => {
       if (prev === undefined) {
-        return []; 
+        return []; // Si el estado es undefined, retorna un array vacío o lo que tenga sentido para tu caso
       }
       return prev.filter((prod) => prod.id !== productId);
     });

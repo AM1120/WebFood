@@ -14,7 +14,7 @@ export default function Navbar() {
     return (
         <nav className="min-h-[10vh] max-h-[10vh] flex flex-row justify-between items-center bg-white px-6 shadow-md">
     <Link to="/" className="flex items-center">
-      <img src="https://i.pinimg.com/564x/02/6b/01/026b01f777c272eb91173ae461ef0116.jpg" alt="Logo" className="min-h-[10vh] max-h-[10vh]" />
+      <img src="https://i.pinimg.com/236x/cf/62/3f/cf623fe97dc5f0b53c7bf95684fd3b3b.jpg" alt="Logo" className="min-h-[10vh] max-h-[10vh]" />
       <span className="ml-4 text-2xl font-bold text-black hover:text-orange-700 transition-colors">Book Cafe</span>
     </Link>
             <ul className="flex flex-row gap-6 navbar-links">

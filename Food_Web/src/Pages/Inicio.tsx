@@ -24,7 +24,7 @@ export default function Inicio(){
       <div style={{ display: 'flex', alignItems: 'center', margin: "10px 0 25px 0" }}>
         
       <img 
-        src="https://plus.unsplash.com/premium_photo-1683657860307-38a7ec985f38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29taWRhJTIwcmFwaWRhfDB8fDB8fHww" 
+        src="https://i.pinimg.com/236x/cf/62/3f/cf623fe97dc5f0b53c7bf95684fd3b3b.jpg" 
         className="px-6" 
         style={{ margin: "0 0 0 0", minHeight: '75vh' }} 
         alt="Comida Rápida"
