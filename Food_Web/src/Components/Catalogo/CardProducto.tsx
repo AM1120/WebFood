@@ -8,7 +8,7 @@ export function CardProducto({ producto, actualizarLista,obtenerProductos }:{pro
     // Eliminar un producto
     const handleDeleteProducto = (productId:number) => {
         console.log("PRODUCTO ID ", productId);
-        fetch(`https://servidor-2-97g5.onrender.com/api/products/${productId}`, {
+        fetch(`https://servidor-2-1.onrender.com/api/products/${productId}`, {
             method: 'DELETE',
         })
         .then((response) => {
@@ -30,15 +30,15 @@ export function CardProducto({ producto, actualizarLista,obtenerProductos }:{pro
 
     return (
         <div className='border border-1 text-center p-4 rounded-xl min-w-[30vh] m-2' style={{boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}>
-            <h2 style={{ fontSize: '18px', fontWeight: 'bold', color: '#333', marginBottom: '8px' }}>
+            <h2 style={{ fontSize: '18px', fontWeight: 'bold', color: '#FFFFFFF', marginBottom: '8px' }}>
                 {producto.nombre}
             </h2>
 
-            <p style={{ fontSize: '16px', color: '#888', marginBottom: '4px' }}>
+            <p style={{ fontSize: '16px', color: '#8A68418', marginBottom: '4px' }}>
                 Precio: S/{producto.precio}
             </p>
 
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '4px' }}>
+            <p style={{ fontSize: '14px', color: '#8A6841', marginBottom: '4px' }}>
                 {producto.descripcion}
             </p>
 
@@ -48,7 +48,7 @@ export function CardProducto({ producto, actualizarLista,obtenerProductos }:{pro
             <div className='flex justify-center'>
                 <img width={100} src={producto.img} alt={producto.nombre} style={{ borderRadius: '4px', objectFit: 'cover' }} />
             </div>
-            
+
             <div className="flex flex-row justify-between">
                 <button onClick={() => handleDeleteProducto(producto.id)}>Eliminar</button>
                 <button onClick={() => handleEditProducto(producto)}>Editar</button>
@@ -72,6 +72,7 @@ function ModalEdit({ producto, closeModal, actualizarLista,obtenerProductos }:{p
         descripcion: producto.descripcion,
         img: producto.img,
         precio: producto.precio,
+        stock: producto.stock,
     });
 
     // Manejar el cambio en los campos del formulario
@@ -85,7 +86,7 @@ function ModalEdit({ producto, closeModal, actualizarLista,obtenerProductos }:{p
         e.preventDefault();
 
         // Aquí puedes realizar la lógica de actualización del producto.
-        fetch(`https://servidor-2-97g5.onrender.com/api/products/${producto.id}`, {
+        fetch(`https://servidor-2-1.onrender.com/api/products/${producto.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -137,9 +138,17 @@ function ModalEdit({ producto, closeModal, actualizarLista,obtenerProductos }:{p
                         placeholder="Precio del producto"
                         className="p-3 border border-orange-300 rounded-lg focus:ring focus:ring-orange-200"
                     />
+                    <input
+                        type="number"
+                        name="stock"
+                        value={formData.stock}
+                        onChange={handleInputChange}
+                        placeholder="Stock del producto"
+                        className="p-3 border border-orange-300 rounded-lg focus:ring focus:ring-orange-200"
+                    />
                     <button
                         type="submit"
-                        className="p-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition-colors"
+                        className="p-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-yellow-800 transition-colors"
                     >
                         Actualizar Producto
                     </button>

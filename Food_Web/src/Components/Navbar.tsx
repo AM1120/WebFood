@@ -22,7 +22,7 @@ export default function Navbar() {
                 <li>
                     <Link
                         to="/crear-producto"
-                        className="text-lg text-orange-500 hover:text-orange-600 transition-colors"
+                        className="text-lg text-orange-500 hover:text-orange-950 transition-colors"
                     >
                         Crear Producto
                     </Link>
@@ -32,7 +32,7 @@ export default function Navbar() {
                 <li>
                     <Link
                         to="/catalogo"
-                        className="text-lg text-orange-500 hover:text-orange-600 transition-colors"
+                        className="text-lg text-orange-500 hover:text-orange-950 transition-colors"
                     >
                         Productos
                     </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
 
                             <Link
                                 to={"/"}
-                                className="text-lg text-orange-500 hover:text-orange-600 transition-colors"
+                                className="text-lg text-orange-500 hover:text-orange-950 transition-colors"
                                 onClick={()=>dispatch(logout())}
                                 >
                                 Cerrar Sesión
@@ -55,7 +55,7 @@ export default function Navbar() {
                         <li>
                             <Link
                                 to="/registrarse"
-                                className="text-lg text-orange-500 hover:text-orange-600 transition-colors"
+                                className="text-lg text-orange-500 hover:text-orange-950 transition-colors"
                             >
                                 Registrarse
                             </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
                         <li>
                             <Link
                                 to="/login"
-                                className="text-lg text-orange-500  hover:text-orange-600 transition-colors"
+                                className="text-lg text-orange-500  hover:text-orange-950 transition-colors"
                             >
                                 Iniciar Sesión
                             </Link>

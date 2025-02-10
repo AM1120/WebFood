@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="min-h-[10vh] max-h-[10vh] bg-orange-600 flex flex-row justify-between items-center px-6 text-white">
+        <footer className="min-h-[10vh] max-h-[10vh] bg-yellow-800 flex flex-row justify-between items-center px-6 text-white">
             <p className="text-sm">&copy; 2024 Todos los derechos reservados</p>
             <div className="text-sm">
                 <p>Síguenos en nuestras redes sociales:</p>

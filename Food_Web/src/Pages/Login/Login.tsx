@@ -84,7 +84,7 @@ export default function Login() {
         <div className="text-center">
           <button
             type="submit"
-            className="bg-orange-500  text-white p-2 rounded hover:bg-orange-600"
+            className="bg-yellow-800  text-white p-2 rounded hover:bg-orange-950"
           >
             Iniciar Sesión
           </button>

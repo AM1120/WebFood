@@ -9,7 +9,7 @@ export default function Catalogo() {
   const [productos, setProductos] = useState<Producto[]>();
 
   const getProductos=()=>{
-    fetch("https://servidor-2-97g5.onrender.com/api/products")
+    fetch("https://servidor-2-1.onrender.com/api/products")
       .then((response) => response.json())
       .then((data) => setProductos(data))
       .catch((error) => console.error("Error al cargar productos:", error));

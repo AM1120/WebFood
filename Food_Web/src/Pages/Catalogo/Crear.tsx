@@ -21,7 +21,7 @@ export default function CrearProducto(){
         e.preventDefault();
         console.log(formData);
         setIsLoading(true);
-        fetch('https://servidor-2-97g5.onrender.com/api/product-create', {
+        fetch('https://servidor-2-1.onrender.com/api/product-create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ export default function CrearProducto(){
                         }}
                         type="submit"
                         disabled={isLoading}
-                        className="p-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition-colors"
+                        className="p-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-950 transition-colors"
                     >
                         Crear Producto
                     </button>
